@@ -40,7 +40,12 @@ const LoginForm = () => {
         <label>Password:</label>
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
       </div>
-      <button type="submit">Login</button>
+      <Link
+            to="/home"
+            className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none"
+          >
+            login
+          </Link>
     </form>
   );
 };
