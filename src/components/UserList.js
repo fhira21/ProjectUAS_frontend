@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const UserList = () => {
   const [users, setUser] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     getUsers();
@@ -23,12 +24,25 @@ const UserList = () => {
     }
   };
 
+  const handleLogout = () => {
+    navigate("/");
+  };
+
   return (
     <div className="columns mt-5">
       <div className="column is-half">
-        <Link to="add" className="button is-success">
-          Add New
-        </Link>
+        <div className="level">
+          <div className="level-left">
+            <Link to="/add" className="button is-success mr-2">
+              Add New
+            </Link>
+          </div>
+          <div className="level-right">
+            <button className="button is-danger" onClick={handleLogout}>
+              Logout
+            </button>
+          </div>
+        </div>
         <table className="table is-striped is-fullwidth mt-2">
           <thead>
             <tr>

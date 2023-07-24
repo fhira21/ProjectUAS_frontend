@@ -22,6 +22,10 @@ const AddUser = () => {
     }
   };
 
+  const goBack = () => {
+    navigate("/");
+  };
+
   return (
     <div className="columns mt-5">
       <div className="column is-half">
@@ -64,9 +68,14 @@ const AddUser = () => {
               </div>
             </div>
           </div>
-          <div className="field">
+          <div className="field is-grouped">
             <div className="control">
-              <button type="submit" className="button is-success">
+              <button type="button" className="button is-success" onClick={goBack}>
+                Back
+              </button>
+            </div>
+            <div className="control is-flex-grow-1">
+              <button type="submit" className="button is-success is-pulled-right">
                 Save
               </button>
             </div>
