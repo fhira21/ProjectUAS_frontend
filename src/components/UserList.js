@@ -25,7 +25,7 @@ const UserList = () => {
   };
 
   const handleLogout = () => {
-    navigate("/");
+    navigate("/login");
   };
 
   return (

@@ -34,7 +34,7 @@ const App = () => {
     <Router>
       <div className="container">
         <Routes>
-          <Route path="/" element={<Login handleLogin={handleLogin} error={error} />} />
+          <Route path="/login" element={<Login handleLogin={handleLogin} error={error} />} />
           <Route path="/register" element={<Register handleRegister={handleRegister} />} />
           <Route path="/list" element={<UserList />} />
           <Route path="/add" element={<AddUser />} />

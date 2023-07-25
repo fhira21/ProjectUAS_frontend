@@ -16,14 +16,15 @@ const AddUser = () => {
         email,
         gender,
       });
-      navigate("/");
+
+      navigate("/list");
     } catch (error) {
       console.log(error);
     }
   };
 
   const goBack = () => {
-    navigate("/");
+    navigate("/list");
   };
 
   return (
