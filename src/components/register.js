@@ -45,9 +45,9 @@ const Register = () => {
   };
 
   return (
-    <div className="register-container">
+    <div>
       <h2>Register</h2>
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
+      {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -63,7 +63,7 @@ const Register = () => {
           value={formData.password}
           onChange={handleChange}
         />
-        <button type="submit" className="register-button">Register</button>
+        <button type="submit">Register</button>
         <p>
           Already have an account? <Link to="/login">Login here</Link>
         </p>
@@ -71,82 +71,5 @@ const Register = () => {
     </div>
   );
 };
-
-// CSS
-const styles = `
-  /* Custom CSS for Register page */
-  .register-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f2f2f2;
-  }
-
-  h2 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 20px;
-  }
-
-  .error-message {
-    color: red;
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  input {
-    padding: 10px;
-    margin: 8px 0;
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-
-  .register-button {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    outline: none;
-  }
-
-  .register-button:hover {
-    background-color: #1f9041;
-  }
-
-  p {
-    font-size: 16px;
-    margin-top: 20px;
-  }
-
-  a {
-    color: #007bff;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-`;
-
-const styleTag = document.createElement("style");
-styleTag.innerHTML = styles;
-document.head.appendChild(styleTag);
 
 export default Register;
