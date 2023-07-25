@@ -5,6 +5,7 @@ import AddUser from "./components/AddUser";
 import EditUser from "./components/EditUser";
 import Register from "./components/register";
 import Login from "./components/login";
+import Home from "./components/home";
 
 const App = () => {
   const [registeredUsers, setRegisteredUsers] = useState([]);
@@ -34,6 +35,7 @@ const App = () => {
     <Router>
       <div className="container">
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login handleLogin={handleLogin} error={error} />} />
           <Route path="/register" element={<Register handleRegister={handleRegister} />} />
           <Route path="/list" element={<UserList />} />

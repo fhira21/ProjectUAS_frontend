@@ -46,9 +46,9 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="login-container">
       <h2>Login</h2>
-      {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -64,7 +64,7 @@ const Login = () => {
           value={formData.password}
           onChange={handleChange}
         />
-        <button type="submit">Login</button>
+        <button type="submit" className="login-button">Login</button>
         <p>
           Don't have an account? <Link to="/register">Register here</Link>
         </p>

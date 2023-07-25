@@ -25,7 +25,7 @@ const UserList = () => {
   };
 
   const handleLogout = () => {
-    navigate("/login");
+    navigate("/");
   };
 
   return (
@@ -62,7 +62,7 @@ const UserList = () => {
                 <td>{user.gender}</td>
                 <td>
                   <Link
-                    to={`edit/${user._id}`}
+                    to={`/edit/${user._id}`}
                     className="button is-info is-small mr-1"
                   >
                     Edit
