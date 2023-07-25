@@ -28,7 +28,7 @@ const EditUser = () => {
         email,
         gender,
       });
-      navigate("/");
+      navigate("/list");
     } catch (error) {
       console.log(error);
     }
